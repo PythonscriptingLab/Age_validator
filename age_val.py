@@ -29,4 +29,8 @@ def check_age():
         if age < 18:
             message = f"Sorry {name}, you are not allowed."
         else:
-            mess
+            message = f"Welcome {name}, you are allowed."
+    return render_template_string(form_html, message=message)
+
+if __name__ == '__main__':
+    app.run(debug=True)
